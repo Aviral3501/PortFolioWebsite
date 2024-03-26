@@ -10,4 +10,3 @@ const Testimonial = () => {
 }
 
 export default Testimonial
-Testimonoal

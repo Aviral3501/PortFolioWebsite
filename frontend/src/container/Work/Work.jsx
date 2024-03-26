@@ -9,5 +9,4 @@ const Work = () => {
   )
 }
 
-export default Work
-Work
+export default Work;
