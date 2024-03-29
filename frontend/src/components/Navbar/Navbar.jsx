@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Navbar.scss';
-import images from '../../constants/images';
+// import images from '../../constants/images';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion'
 
@@ -8,9 +8,9 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <nav className='app__navbar'>
-      <div className='app__navbar-logo'>
-        <img src={images.logo} alt='logo' />
-      </div>
+      {/* <div className='app__navbar-logo'>
+        <img src={images.namelogoaviral} alt='logo'   />
+      </div> */}
 
 
       <ul className='app__navbar-links'>

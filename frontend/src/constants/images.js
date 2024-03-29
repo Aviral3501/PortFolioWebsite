@@ -38,6 +38,7 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import namelogoaviral from '../assets/namelogo-aviral.png'
 
 const images= {
   email,
@@ -73,6 +74,7 @@ const images= {
   nb,
   skype,
   spotify,
+  namelogoaviral,
 };
 
 export default images;
