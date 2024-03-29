@@ -6,6 +6,8 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Work.scss';
 
+let currTag = "All";
+
 const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
@@ -24,6 +26,7 @@ const Work = () => {
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
+    currTag = item;
 
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
@@ -99,7 +102,7 @@ const Work = () => {
               <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
 
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0]}</p>
+                <p className="p-text">{currTag}</p>
               </div>
             </div>
           </div>
