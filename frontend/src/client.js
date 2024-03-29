@@ -3,6 +3,9 @@
 import {createClient} from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 
+// console.log(process.env.REACT_APP_SANITY_PROJECT_ID);
+// console.log(process.env.REACT_APP_SANITY_TOKEN);
+
 
 export const client = createClient({
     projectId:process.env.REACT_APP_SANITY_PROJECT_ID,
@@ -10,6 +13,7 @@ export const client = createClient({
     apiVersion:'2024-03-27', 
     useCdn:true,
     token: process.env.REACT_APP_SANITY_TOKEN,
+    ignoreBrowserTokenWarning:true,
 });
 
 // run sanity manage command in backend to run sanity management tool
