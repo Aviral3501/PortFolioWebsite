@@ -201,3 +201,689 @@
         margin:2rem 0;   
     }
 }
+
+.header__container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #fafafa, #f5f3ff);
+  overflow: hidden;
+  z-index: 1;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    padding: 4rem 1.5rem;
+  }
+}
+
+/* INFO SECTION */
+.header__info {
+  flex: 1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header__badge {
+  display: flex;
+  align-items: center;
+  .wave {
+    font-size: 2rem;
+    animation: wave 2s infinite;
+  }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+}
+
+.head-text {
+  font-size: 3.3rem;
+  font-weight: 800;
+  margin: 0.3rem 0;
+  @media (max-width: 600px) { font-size: 2.5rem; }
+}
+
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #feca57,
+    #1dd1a1,
+    #54a0ff,
+    #5f27cd,
+    #ff6b6b
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 6s ease infinite;
+}
+
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: -0.4rem;
+}
+
+.flipping-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.description {
+  max-width: 600px;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* SKILLS BADGES */
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
+}
+
+.glass-badge {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4f46e5;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.1);
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+/* CTA BUTTONS */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.cta-btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  }
+}
+
+.secondary-btn {
+  border: 2px solid #6366f1;
+  color: #6366f1;
+  background: transparent;
+
+  &:hover {
+    background: #6366f1;
+    color: white;
+  }
+}
+
+/* TECH CIRCLES */
+.header__circles {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+.circle-cmp {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+
+  img {
+    width: 60%;
+    height: 60%;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(79, 70, 229, 0.3);
+  }
+}
+
+
+/* ==========================
+   Animated Background
+========================== */
+
+/* ==========================
+   Info Section
+========================== */
+.header__info {
+  flex: 1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .header__badge {
+    display: flex;
+    align-items: center;
+    .wave {
+      font-size: 2rem;
+      animation: wave 2s infinite;
+    }
+    @keyframes wave {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(15deg);
+      }
+    }
+  }
+
+  .p-text {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .head-text {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin: 0.3rem 0;
+
+    @media screen and (max-width: 600px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  .description {
+    max-width: 550px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #475569;
+  }
+
+  .highlight {
+    color: #4f46e5;
+    position: relative;
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* ==========================
+   Rainbow Gradient
+========================== */
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #feca57,
+    #1dd1a1,
+    #54a0ff,
+    #5f27cd,
+    #ff6b6b
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 6s ease infinite;
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ==========================
+   Tag / Flipping Text
+========================== */
+.flipping-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #334155;
+  text-align: left;
+}
+
+/* ==========================
+   Tech Circles
+========================== */
+.header__circles {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  z-index: 2;
+
+  .circle-cmp {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+
+    img {
+      width: 55%;
+      height: 55%;
+      object-fit: contain;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 35px rgba(147, 51, 234, 0.3);
+    }
+  }
+}
+
+.header__container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, #fafafa, #f4f3ff);
+  z-index: 1;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+    padding: 4rem 1.5rem;
+  }
+}
+
+/* Animated Background */
+.header__background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: 0.35;
+    animation: float 8s ease-in-out infinite alternate;
+  }
+
+  .blob1 {
+    background: #60a5fa;
+    width: 450px;
+    height: 450px;
+    top: -120px;
+    left: -120px;
+  }
+  .blob2 {
+    background: #a78bfa;
+    width: 380px;
+    height: 380px;
+    bottom: 10%;
+    right: 15%;
+    animation-delay: 2s;
+  }
+  .blob3 {
+    background: #f472b6;
+    width: 280px;
+    height: 280px;
+    top: 35%;
+    right: 30%;
+    animation-delay: 4s;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      transform: translateY(-20px) scale(1.05);
+    }
+  }
+}
+
+/* Left Info Section */
+.header__info {
+  flex: 1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header__badge {
+  display: flex;
+  align-items: center;
+  .wave {
+    font-size: 2rem;
+    animation: wave 2s infinite;
+  }
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+}
+
+.head-text {
+  font-size: 3.3rem;
+  font-weight: 800;
+  margin: 0.3rem 0;
+  @media (max-width: 600px) { font-size: 2.5rem; }
+}
+
+.rainbow-text {
+  background: linear-gradient(
+    90deg,
+    #ff6b6b,
+    #feca57,
+    #1dd1a1,
+    #54a0ff,
+    #5f27cd,
+    #ff6b6b
+  );
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 6s ease infinite;
+}
+
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: -0.4rem;
+}
+
+.flipping-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.description {
+  max-width: 600px;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+/* Skills Badges */
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
+}
+
+.glass-badge {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4f46e5;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.1);
+  cursor: default;
+}
+
+/* Tech Circles */
+.header__circles {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+.circle-cmp {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+
+  img {
+    width: 60%;
+    height: 60%;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(79, 70, 229, 0.3);
+  }
+}
+
+
+/* =======================
+   TECH CLUSTER SECTION
+======================= */
+.tech-cluster {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  min-height: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.4s ease;
+
+  @media (max-width: 700px) {
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+}
+
+.tech-orb {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  img {
+    width: 55%;
+    height: 55%;
+    object-fit: contain;
+    z-index: 2;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Glowing Halo */
+.orb-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.3),
+    rgba(147, 51, 234, 0.15),
+    transparent
+  );
+  opacity: 0.8;
+  z-index: 1;
+  filter: blur(12px);
+  animation: pulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Tooltip on hover */
+.orb-tooltip {
+  position: absolute;
+  bottom: -1.5rem;
+  background: rgba(99, 102, 241, 0.9);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(5px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Easter Egg Subtle Particle Effect */
+.tech-cluster::before,
+.tech-cluster::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.25);
+  animation: floatParticle 10s linear infinite;
+}
+
+.tech-cluster::after {
+  background: rgba(168, 85, 247, 0.3);
+  width: 6px;
+  height: 6px;
+  animation-delay: 3s;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(150px, -100px) scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50px, 50px) scale(1);
+    opacity: 1;
+  }
+}
